@@ -21,6 +21,10 @@ import java.util.regex.Pattern;
  */
 public class AllianceMobilizationTask extends DelayedTask {
 
+    private static final Pattern ATTEMPTS_PATTERN = Pattern.compile("(\\d{1,2})\\s*/\\s*(\\d{0,3})");
+    private static final DTOPoint ATTEMPTS_COUNTER_TOP_LEFT = new DTOPoint(168, 528);
+    private static final DTOPoint ATTEMPTS_COUNTER_BOTTOM_RIGHT = new DTOPoint(235, 565);
+
     public AllianceMobilizationTask(DTOProfiles profile, TpDailyTaskEnum tpTask) {
         super(profile, tpTask);
         // TODO: Add scheduling logic if needed, similar to ArenaTask
